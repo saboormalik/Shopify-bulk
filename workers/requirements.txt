@@ -1,0 +1,14 @@
+celery==5.4.0
+redis==5.2.0
+pymongo==4.6.1
+boto3==1.35.72
+pandas==2.2.3
+openpyxl==3.1.5
+xlsxwriter==3.1.9
+requests==2.32.3
+python-dotenv==1.0.1
+ShopifyAPI==12.7.0
+pyactiveresource==2.2.2
+python-dateutil==2.8.2
+validators==0.22.0
+pillow==10.1.0

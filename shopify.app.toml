@@ -1,0 +1,34 @@
+# Shopify App Configuration
+# Learn more: https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "shopify-bulk-manager"
+client_id = ""
+application_url = "https://app.your-domain.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = ""
+
+[access_scopes]
+scopes = "read_products,write_products,read_customers,write_customers,read_orders,write_orders,read_inventory,write_inventory,read_content,write_content"
+
+[auth]
+redirect_urls = [
+  "https://api.your-domain.com/api/auth/callback",
+  "https://api.your-domain.com/api/auth/shopify/callback"
+]
+
+[webhooks]
+api_version = "2025-10"
+
+[[webhooks.subscriptions]]
+topics = [ "app/uninstalled" ]
+uri = "/api/webhooks/app-uninstalled"
+
+[[webhooks.subscriptions]]
+topics = [ "shop/update" ]
+uri = "/api/webhooks/shop-update"
+
+[pos]
+embedded = false
